@@ -20,6 +20,9 @@
 		E3BC234128C50E0C00172695 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BC234028C50E0C00172695 /* Node.swift */; };
 		E3BC234328C5191200172695 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BC234228C5191100172695 /* LinkedList.swift */; };
 		E3BC234528C51DAC00172695 /* SomeViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BC234428C51DAC00172695 /* SomeViewCoordinator.swift */; };
+		E3BC234828C52A8700172695 /* WaitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BC234728C52A8700172695 /* WaitModel.swift */; };
+		E3BC234A28C52AD500172695 /* WaitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BC234928C52AD500172695 /* WaitViewModel.swift */; };
+		E3BC234C28C52AED00172695 /* WaitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BC234B28C52AED00172695 /* WaitView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		E3BC234028C50E0C00172695 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		E3BC234228C5191100172695 /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 		E3BC234428C51DAC00172695 /* SomeViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeViewCoordinator.swift; sourceTree = "<group>"; };
+		E3BC234728C52A8700172695 /* WaitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitModel.swift; sourceTree = "<group>"; };
+		E3BC234928C52AD500172695 /* WaitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitViewModel.swift; sourceTree = "<group>"; };
+		E3BC234B28C52AED00172695 /* WaitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +75,7 @@
 		E3BC231128C4D2E900172695 /* Hide Adblock Test Target */ = {
 			isa = PBXGroup;
 			children = (
+				E3BC234628C52A5900172695 /* WaitModule */,
 				E3BC233F28C50DEB00172695 /* CustomTypes */,
 				E3BC233428C5093200172695 /* Coordinators */,
 				E3BC232C28C4E08700172695 /* Services */,
@@ -149,6 +156,16 @@
 			path = CustomTypes;
 			sourceTree = "<group>";
 		};
+		E3BC234628C52A5900172695 /* WaitModule */ = {
+			isa = PBXGroup;
+			children = (
+				E3BC234728C52A8700172695 /* WaitModel.swift */,
+				E3BC234928C52AD500172695 /* WaitViewModel.swift */,
+				E3BC234B28C52AED00172695 /* WaitView.swift */,
+			);
+			path = WaitModule;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -226,15 +243,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3BC234328C5191200172695 /* LinkedList.swift in Sources */,
+				E3BC234828C52A8700172695 /* WaitModel.swift in Sources */,
 				E3BC232728C4DE9600172695 /* Onboarding.swift in Sources */,
 				E3BC233C28C50C5800172695 /* MainCoordinator.swift in Sources */,
 				E3BC233128C4E2CB00172695 /* ParseKeys.swift in Sources */,
+				E3BC234C28C52AED00172695 /* WaitView.swift in Sources */,
 				E3BC232F28C4E0C000172695 /* ParseManager.swift in Sources */,
 				E3BC232928C4DF9700172695 /* SomeScreen.swift in Sources */,
 				E3BC232B28C4DFBF00172695 /* Paywall.swift in Sources */,
 				E3BC234128C50E0C00172695 /* Node.swift in Sources */,
 				E3BC231328C4D2E900172695 /* Hide_Adblock_Test_TargetApp.swift in Sources */,
 				E3BC234528C51DAC00172695 /* SomeViewCoordinator.swift in Sources */,
+				E3BC234A28C52AD500172695 /* WaitViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

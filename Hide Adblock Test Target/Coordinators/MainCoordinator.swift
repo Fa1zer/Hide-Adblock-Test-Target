@@ -7,8 +7,9 @@
 
 import Foundation
 import SwiftUI
+import Combine
 
-protocol MainCoorditable {
+protocol MainCoordinatable {
     var coordinatorDelegate: MainCoordinator? { get set }
 }
 
@@ -19,7 +20,15 @@ final class MainCoordinator {
     }
     
     func goToWait() -> some View {
-//        return wait view
+        let viewModel = WaitViewModel(model: WaitModel())
+        
+        viewModel.coordinatorDelegate = self
+        
+        return WaitView(viewModel: viewModel)
+    }
+    
+    private func getOnboarding() -> AnyPublisher<Onboarding, Never> {
+        ParseManager.first()
     }
     
 }

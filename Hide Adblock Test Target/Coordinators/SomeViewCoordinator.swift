@@ -20,14 +20,14 @@ final class SomeViewCoordinator {
         self.someViewsList = LinkedList(elements: views)
     }
     
-    func start() -> (some View)? {
-        if let view = self.someViewsList.first {
-            return self.go(to: view.value)
-        }
-    }
-    
-    func go(to view: SomeScreen) -> some View {
-//        go to some view
-    }
+//    func start() -> (some View)? {
+//        if let view = self.someViewsList.first {
+//            return self.go(to: view.value)
+//        }
+//    }
+//    
+//    func go(to view: SomeScreen) -> some View {
+////        go to some view
+//    }
     
 }
