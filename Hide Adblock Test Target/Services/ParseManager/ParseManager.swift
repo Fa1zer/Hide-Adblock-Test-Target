@@ -14,13 +14,17 @@ final class ParseManager {
         T.query.findAll { result in
             switch result {
             case .success(let models):
-                completionHandler(models)
+                DispatchQueue.main.async {
+                    completionHandler(models)
+                }
                 
                 return
             case .failure(let error):
                 print("❌ Error: \(error.localizedDescription)")
                 
-                completionHandler([T]())
+                DispatchQueue.main.async {
+                    completionHandler([T]())
+                }
                 
                 return
             }
@@ -31,13 +35,17 @@ final class ParseManager {
         T.query.findAll { result in
             switch result {
             case .success(let models):
-                completionHandler(models.last ?? T())
+                DispatchQueue.main.async {
+                    completionHandler(models.last ?? T())
+                }
                 
                 return
             case .failure(let error):
                 print("❌ Error: \(error.localizedDescription)")
                 
-                completionHandler(T())
+                DispatchQueue.main.async {
+                    completionHandler(T())
+                }
                 
                 return
             }
@@ -48,13 +56,17 @@ final class ParseManager {
         T.query.findAll { result in
             switch result {
             case .success(let models):
-                completionHandler(models.first ?? T())
+                DispatchQueue.main.async {
+                    completionHandler(models.first ?? T())
+                }
                 
                 return
             case .failure(let error):
                 print("❌ Error: \(error.localizedDescription)")
                 
-                completionHandler(T())
+                DispatchQueue.main.async {
+                    completionHandler(T())
+                }
                 
                 return
             }
