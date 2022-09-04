@@ -16,6 +16,10 @@
 		E3BC232B28C4DFBF00172695 /* Paywall.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BC232A28C4DFBF00172695 /* Paywall.swift */; };
 		E3BC232F28C4E0C000172695 /* ParseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BC232E28C4E0C000172695 /* ParseManager.swift */; };
 		E3BC233128C4E2CB00172695 /* ParseKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BC233028C4E2CB00172695 /* ParseKeys.swift */; };
+		E3BC233C28C50C5800172695 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BC233B28C50C5800172695 /* MainCoordinator.swift */; };
+		E3BC234128C50E0C00172695 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BC234028C50E0C00172695 /* Node.swift */; };
+		E3BC234328C5191200172695 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BC234228C5191100172695 /* LinkedList.swift */; };
+		E3BC234528C51DAC00172695 /* SomeViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BC234428C51DAC00172695 /* SomeViewCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		E3BC232A28C4DFBF00172695 /* Paywall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paywall.swift; sourceTree = "<group>"; };
 		E3BC232E28C4E0C000172695 /* ParseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseManager.swift; sourceTree = "<group>"; };
 		E3BC233028C4E2CB00172695 /* ParseKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseKeys.swift; sourceTree = "<group>"; };
+		E3BC233B28C50C5800172695 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		E3BC234028C50E0C00172695 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		E3BC234228C5191100172695 /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
+		E3BC234428C51DAC00172695 /* SomeViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeViewCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +69,8 @@
 		E3BC231128C4D2E900172695 /* Hide Adblock Test Target */ = {
 			isa = PBXGroup;
 			children = (
+				E3BC233F28C50DEB00172695 /* CustomTypes */,
+				E3BC233428C5093200172695 /* Coordinators */,
 				E3BC232C28C4E08700172695 /* Services */,
 				E3BC232528C4DE7D00172695 /* Models */,
 				E3BC232128C4D33A00172695 /* Sources */,
@@ -119,6 +129,24 @@
 				E3BC232E28C4E0C000172695 /* ParseManager.swift */,
 			);
 			path = ParseManager;
+			sourceTree = "<group>";
+		};
+		E3BC233428C5093200172695 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				E3BC233B28C50C5800172695 /* MainCoordinator.swift */,
+				E3BC234428C51DAC00172695 /* SomeViewCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		E3BC233F28C50DEB00172695 /* CustomTypes */ = {
+			isa = PBXGroup;
+			children = (
+				E3BC234028C50E0C00172695 /* Node.swift */,
+				E3BC234228C5191100172695 /* LinkedList.swift */,
+			);
+			path = CustomTypes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,12 +225,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3BC234328C5191200172695 /* LinkedList.swift in Sources */,
 				E3BC232728C4DE9600172695 /* Onboarding.swift in Sources */,
+				E3BC233C28C50C5800172695 /* MainCoordinator.swift in Sources */,
 				E3BC233128C4E2CB00172695 /* ParseKeys.swift in Sources */,
 				E3BC232F28C4E0C000172695 /* ParseManager.swift in Sources */,
 				E3BC232928C4DF9700172695 /* SomeScreen.swift in Sources */,
 				E3BC232B28C4DFBF00172695 /* Paywall.swift in Sources */,
+				E3BC234128C50E0C00172695 /* Node.swift in Sources */,
 				E3BC231328C4D2E900172695 /* Hide_Adblock_Test_TargetApp.swift in Sources */,
+				E3BC234528C51DAC00172695 /* SomeViewCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
