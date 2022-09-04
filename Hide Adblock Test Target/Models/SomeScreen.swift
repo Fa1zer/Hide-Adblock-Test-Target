@@ -19,4 +19,5 @@ struct SomeScreen: ParseObject {
     var firstColorLocations: Float?
     var secondColorHEX: String?
     var secondColorLocation: Float?
+    var number: Int?
 }
