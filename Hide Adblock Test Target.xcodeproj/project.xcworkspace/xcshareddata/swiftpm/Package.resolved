@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "parse-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/parse-community/Parse-Swift",
+      "state" : {
+        "branch" : "main",
+        "revision" : "106f97d7e2ef7e847db7d126f10de158794db439"
+      }
+    }
+  ],
+  "version" : 2
+}

@@ -10,6 +10,7 @@
 		E3BC231328C4D2E900172695 /* Hide_Adblock_Test_TargetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BC231228C4D2E900172695 /* Hide_Adblock_Test_TargetApp.swift */; };
 		E3BC231728C4D2EB00172695 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3BC231628C4D2EB00172695 /* Assets.xcassets */; };
 		E3BC231A28C4D2EB00172695 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3BC231928C4D2EB00172695 /* Preview Assets.xcassets */; };
+		E3BC232428C4D44900172695 /* ParseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E3BC232328C4D44900172695 /* ParseSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3BC232428C4D44900172695 /* ParseSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +98,9 @@
 			dependencies = (
 			);
 			name = "Hide Adblock Test Target";
+			packageProductDependencies = (
+				E3BC232328C4D44900172695 /* ParseSwift */,
+			);
 			productName = "Hide Adblock Test Target";
 			productReference = E3BC230F28C4D2E900172695 /* Hide Adblock Test Target.app */;
 			productType = "com.apple.product-type.application";
@@ -124,6 +129,9 @@
 				Base,
 			);
 			mainGroup = E3BC230628C4D2E900172695;
+			packageReferences = (
+				E3BC232228C4D44900172695 /* XCRemoteSwiftPackageReference "Parse-Swift" */,
+			);
 			productRefGroup = E3BC231028C4D2E900172695 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -351,6 +359,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E3BC232228C4D44900172695 /* XCRemoteSwiftPackageReference "Parse-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/parse-community/Parse-Swift";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E3BC232328C4D44900172695 /* ParseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E3BC232228C4D44900172695 /* XCRemoteSwiftPackageReference "Parse-Swift" */;
+			productName = ParseSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E3BC230728C4D2E900172695 /* Project object */;
 }
