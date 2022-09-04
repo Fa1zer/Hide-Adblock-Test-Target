@@ -11,6 +11,9 @@
 		E3BC231728C4D2EB00172695 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3BC231628C4D2EB00172695 /* Assets.xcassets */; };
 		E3BC231A28C4D2EB00172695 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3BC231928C4D2EB00172695 /* Preview Assets.xcassets */; };
 		E3BC232428C4D44900172695 /* ParseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E3BC232328C4D44900172695 /* ParseSwift */; };
+		E3BC232728C4DE9600172695 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BC232628C4DE9600172695 /* Onboarding.swift */; };
+		E3BC232928C4DF9700172695 /* SomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BC232828C4DF9700172695 /* SomeScreen.swift */; };
+		E3BC232B28C4DFBF00172695 /* Paywall.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BC232A28C4DFBF00172695 /* Paywall.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +21,9 @@
 		E3BC231228C4D2E900172695 /* Hide_Adblock_Test_TargetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hide_Adblock_Test_TargetApp.swift; sourceTree = "<group>"; };
 		E3BC231628C4D2EB00172695 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3BC231928C4D2EB00172695 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E3BC232628C4DE9600172695 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
+		E3BC232828C4DF9700172695 /* SomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeScreen.swift; sourceTree = "<group>"; };
+		E3BC232A28C4DFBF00172695 /* Paywall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paywall.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +57,7 @@
 		E3BC231128C4D2E900172695 /* Hide Adblock Test Target */ = {
 			isa = PBXGroup;
 			children = (
+				E3BC232528C4DE7D00172695 /* Models */,
 				E3BC232128C4D33A00172695 /* Sources */,
 				E3BC232028C4D32000172695 /* SupportingFiles */,
 				E3BC231828C4D2EB00172695 /* Preview Content */,
@@ -80,6 +87,16 @@
 				E3BC231628C4D2EB00172695 /* Assets.xcassets */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		E3BC232528C4DE7D00172695 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E3BC232628C4DE9600172695 /* Onboarding.swift */,
+				E3BC232828C4DF9700172695 /* SomeScreen.swift */,
+				E3BC232A28C4DFBF00172695 /* Paywall.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +175,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3BC232728C4DE9600172695 /* Onboarding.swift in Sources */,
+				E3BC232928C4DF9700172695 /* SomeScreen.swift in Sources */,
+				E3BC232B28C4DFBF00172695 /* Paywall.swift in Sources */,
 				E3BC231328C4D2E900172695 /* Hide_Adblock_Test_TargetApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
