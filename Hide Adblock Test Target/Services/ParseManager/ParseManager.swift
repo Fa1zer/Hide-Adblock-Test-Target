@@ -7,70 +7,32 @@
 
 import Foundation
 import ParseSwift
+import Combine
 
 final class ParseManager {
     
-    static func all<T: ParseObject>(completionHandler: @escaping ([T]) -> Void) {
-        T.query.findAll { result in
-            switch result {
-            case .success(let models):
-                DispatchQueue.main.async {
-                    completionHandler(models)
-                }
-                
-                return
-            case .failure(let error):
-                print("❌ Error: \(error.localizedDescription)")
-                
-                DispatchQueue.main.async {
-                    completionHandler([T]())
-                }
-                
-                return
-            }
-        }
+    static func all<T: ParseObject>() -> AnyPublisher<[T], Never> {
+        T.query.findPublisher()
+            .replaceError(with: [T]())
+            .eraseToAnyPublisher()
     }
     
-    static func last<T: ParseObject>(completionHandler: @escaping (T) -> Void) {
-        T.query.findAll { result in
-            switch result {
-            case .success(let models):
-                DispatchQueue.main.async {
-                    completionHandler(models.last ?? T())
-                }
-                
-                return
-            case .failure(let error):
-                print("❌ Error: \(error.localizedDescription)")
-                
-                DispatchQueue.main.async {
-                    completionHandler(T())
-                }
-                
-                return
+    static func last<T: ParseObject>() -> AnyPublisher<T, Never> {
+        T.query.findAllPublisher()
+            .map { models in
+                return models.last ?? T()
             }
-        }
+            .replaceError(with: T())
+            .eraseToAnyPublisher()
     }
     
-    static func first<T: ParseObject>(completionHandler: @escaping (T) -> Void) {
-        T.query.findAll { result in
-            switch result {
-            case .success(let models):
-                DispatchQueue.main.async {
-                    completionHandler(models.first ?? T())
-                }
-                
-                return
-            case .failure(let error):
-                print("❌ Error: \(error.localizedDescription)")
-                
-                DispatchQueue.main.async {
-                    completionHandler(T())
-                }
-                
-                return
+    static func first<T: ParseObject>() -> AnyPublisher<T, Never> {
+        T.query.findAllPublisher()
+            .map { models in
+                return models.first ?? T()
             }
-        }
+            .replaceError(with: T())
+            .eraseToAnyPublisher()
     }
     
 }

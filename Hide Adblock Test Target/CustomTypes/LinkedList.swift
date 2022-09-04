@@ -36,11 +36,11 @@ final public class LinkedList<T> {
     
     public func remove(at index: Int) {
         if let next = self.nodes[index].next, self.nodes[index] != self.nodes.first {
-            self.nodes[index - 1] = next
+            self.nodes[index - 1].next = next
         }
         
         if let last = self.nodes[index].last, self.nodes[index] != self.nodes.last {
-            self.nodes[index + 1] = last
+            self.nodes[index + 1].last = last
         }
         
         self.nodes.remove(at: index)
