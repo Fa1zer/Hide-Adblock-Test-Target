@@ -21,7 +21,7 @@ struct Hide_Adblock_Test_TargetApp: App {
     
     var body: some Scene {
         WindowGroup {
-            
+            MainCoordinator().start()
         }
     }
     
