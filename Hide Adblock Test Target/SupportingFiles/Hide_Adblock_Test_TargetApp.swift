@@ -6,12 +6,23 @@
 //
 
 import SwiftUI
+import ParseSwift
 
 @main
 struct Hide_Adblock_Test_TargetApp: App {
+    
+    init() {
+        ParseSwift.initialize(configuration: ParseConfiguration(
+            applicationId: applicationId,
+            clientKey: clientKey,
+            serverURL: URL(string: server) ?? URL(fileURLWithPath: "")
+        ))
+    }
+    
     var body: some Scene {
         WindowGroup {
             
         }
     }
+    
 }
