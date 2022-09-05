@@ -33,8 +33,4 @@ final class MainCoordinator {
         EmptyView()
     }
     
-    private func getOnboarding() -> AnyPublisher<Onboarding, Never> {
-        ParseManager.first()
-    }
-    
 }
