@@ -11,20 +11,28 @@ import SwiftUI
 
 final class WaitViewModel: MainCoordinatable, ObservableObject {
     
+    var callBack: (() -> Void)?
     var coordinatorDelegate: MainCoordinator?
-    private let model: WaitModel
+    @ObservedObject private var model: WaitModel
     
     init(model: WaitModel) {
         self.model = model
+        
         self.model.$onboarding
-            .assign(to: &self.$onboarding)
+            .assign(to: \.onboarding, on: self)
+            .store(in: &self.subscriptions)
     }
     
-    @Published var onboarding = Onboarding()
-    var subscripitons = Set<AnyCancellable>()
+    @Published var onboarding: Onboarding? {
+        didSet {
+            self.callBack?()
+        }
+    }
+    
+    private var subscriptions = Set<AnyCancellable>()
     
     func goToOnboarding() -> some View {
-        self.coordinatorDelegate?.goToOnboarding(self.onboarding)
+        self.coordinatorDelegate?.goToOnboarding(self.onboarding ?? Onboarding())
     }
     
 }
