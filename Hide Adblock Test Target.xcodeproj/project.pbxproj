@@ -23,6 +23,7 @@
 		E3BC234828C52A8700172695 /* WaitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BC234728C52A8700172695 /* WaitModel.swift */; };
 		E3BC234A28C52AD500172695 /* WaitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BC234928C52AD500172695 /* WaitViewModel.swift */; };
 		E3BC234C28C52AED00172695 /* WaitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BC234B28C52AED00172695 /* WaitView.swift */; };
+		E3BC234F28C5FFDA00172695 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BC234E28C5FFDA00172695 /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		E3BC234728C52A8700172695 /* WaitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitModel.swift; sourceTree = "<group>"; };
 		E3BC234928C52AD500172695 /* WaitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitViewModel.swift; sourceTree = "<group>"; };
 		E3BC234B28C52AED00172695 /* WaitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitView.swift; sourceTree = "<group>"; };
+		E3BC234E28C5FFDA00172695 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 		E3BC231128C4D2E900172695 /* Hide Adblock Test Target */ = {
 			isa = PBXGroup;
 			children = (
+				E3BC234D28C5FFC400172695 /* TypeExtensions */,
 				E3BC234628C52A5900172695 /* WaitModule */,
 				E3BC233F28C50DEB00172695 /* CustomTypes */,
 				E3BC233428C5093200172695 /* Coordinators */,
@@ -166,6 +169,14 @@
 			path = WaitModule;
 			sourceTree = "<group>";
 		};
+		E3BC234D28C5FFC400172695 /* TypeExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				E3BC234E28C5FFDA00172695 /* Color.swift */,
+			);
+			path = TypeExtensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -251,6 +262,7 @@
 				E3BC232F28C4E0C000172695 /* ParseManager.swift in Sources */,
 				E3BC232928C4DF9700172695 /* SomeScreen.swift in Sources */,
 				E3BC232B28C4DFBF00172695 /* Paywall.swift in Sources */,
+				E3BC234F28C5FFDA00172695 /* Color.swift in Sources */,
 				E3BC234128C50E0C00172695 /* Node.swift in Sources */,
 				E3BC231328C4D2E900172695 /* Hide_Adblock_Test_TargetApp.swift in Sources */,
 				E3BC234528C51DAC00172695 /* SomeViewCoordinator.swift in Sources */,

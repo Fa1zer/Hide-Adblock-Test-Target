@@ -31,7 +31,7 @@ struct WaitView: View {
             .hidden()
         }
     }
-    
+        
 }
 
 struct WaitView_Previews: PreviewProvider {
