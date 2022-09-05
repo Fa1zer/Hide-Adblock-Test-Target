@@ -6,29 +6,52 @@
 //
 
 import SwiftUI
+import Combine
 
 struct WaitView: View {
     
     @ObservedObject private var viewModel: WaitViewModel
-    @State private var isGoToOnboarding = false
     
     init(viewModel: WaitViewModel) {
         self.viewModel = viewModel
     }
     
+    @State private var isGoToOnboarding = false
+    private var subscriptions = Set<AnyCancellable>()
+    
     var body: some View {
         NavigationView {
-            ProgressView()
-                .scaleEffect(2.0, anchor: .center)
-                .frame(width: 50, height: 50)
-            
-            NavigationLink(
-                destination: Text(String()),
-                isActive: self.$isGoToOnboarding
-            ) {
-                self.viewModel.goToOnboarding()
+            ZStack {
+                Color(.systemBackground).ignoresSafeArea()
+                
+                ProgressView()
+                    .scaleEffect(2.0, anchor: .center)
+                    .frame(width: 50, height: 50)
+                
+                NavigationLink(isActive: self.$isGoToOnboarding) {
+                    self.viewModel.goToOnboarding()
+                } label: {
+                    EmptyView()
+                }
+                .hidden()
             }
-            .hidden()
+        }
+        .onAppear() {
+            self.viewModel.callBack = {
+                var result = self
+                
+                self.viewModel.$onboarding
+                    .sink { _ in
+                        if self.viewModel.onboarding != nil {
+                            self.isGoToOnboarding = true
+                        }
+                    }
+                    .store(in: &result.subscriptions)
+                
+                if self.viewModel.onboarding != nil {
+                    self.isGoToOnboarding = true
+                }
+            }
         }
     }
         

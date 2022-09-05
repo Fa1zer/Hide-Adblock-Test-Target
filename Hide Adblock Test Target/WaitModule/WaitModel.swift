@@ -10,6 +10,6 @@ import Combine
 
 final class WaitModel: ObservableObject {
     
-    @Published var onboarding = Onboarding()
+    @Published var onboarding: Onboarding?
     
 }

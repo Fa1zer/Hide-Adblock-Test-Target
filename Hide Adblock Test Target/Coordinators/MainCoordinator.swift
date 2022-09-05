@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 import Combine
+import ParseSwift
 
 protocol MainCoordinatable {
     var coordinatorDelegate: MainCoordinator? { get set }
@@ -15,22 +16,48 @@ protocol MainCoordinatable {
 
 final class MainCoordinator {
     
+    deinit {
+        self.subscriptions.forEach { $0.cancel() }
+    }
+    
+    private var subscriptions = Set<AnyCancellable>()
+    
     func start() -> some View {
         self.goToWait()
     }
     
     func goToWait() -> some View {
-        let viewModel = WaitViewModel(model: WaitModel())
+        let model = WaitModel()
+        let viewModel = WaitViewModel(model: model)
         
         viewModel.coordinatorDelegate = self
+        
+        self.getOnboarding()
+            .sink { onboarding in
+                model.onboarding = onboarding
+            }
+            .store(in: &self.subscriptions)
         
         return WaitView(viewModel: viewModel)
     }
     
     func goToOnboarding(_ view: Onboarding) -> some View {
-//        go to onboarding
+        let model = OnboardingModel()
+        let viewModel = OnboardingViewModel(model: model, onboarding: view)
+        
+        viewModel.coordinatorDelegate = self
+        
+        return OnboardingView(viewModel: viewModel)
+    }
+    
+    func goToPaywall(_ view: Paywall) -> some View {
+//        go to paywall
         
         EmptyView()
+    }
+    
+    private func getOnboarding() -> AnyPublisher<Onboarding, Never> {
+        ParseManager.last()
     }
     
 }
