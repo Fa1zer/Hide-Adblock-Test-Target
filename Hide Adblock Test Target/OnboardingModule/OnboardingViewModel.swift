@@ -25,14 +25,6 @@ final class OnboardingViewModel: MainCoordinatable, ObservableObject {
         self.subscriptions.forEach { $0.cancel() }
     }
     
-    func getPaywall() {
-        self.model.getPaywall()
-            .sink { paywall in
-                self.paywall = paywall
-            }
-            .store(in: &self.subscriptions)
-    }
-    
     @Published var paywall: Paywall? {
         didSet {
             self.callBack?()
@@ -43,6 +35,14 @@ final class OnboardingViewModel: MainCoordinatable, ObservableObject {
     
     func goToPaywall() -> some View {
         self.coordinatorDelegate?.goToPaywall(self.paywall ?? Paywall())
+    }
+    
+    func getPaywall() {
+        self.model.getPaywall()
+            .sink { paywall in
+                self.paywall = paywall
+            }
+            .store(in: &self.subscriptions)
     }
     
 }

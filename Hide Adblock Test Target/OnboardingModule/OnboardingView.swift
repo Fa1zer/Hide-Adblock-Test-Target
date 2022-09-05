@@ -45,6 +45,7 @@ struct OnboardingView: View {
                                             
                         Button {
                             self.isHidden = false
+                            self.viewModel.getPaywall()
                         } label: {
                             HStack {
                                 Spacer()
@@ -76,18 +77,14 @@ struct OnboardingView: View {
                         
                         Spacer()
                     }
+                    
+                    NavigationLink(isActive: self.$isGoToPaywallReady) {
+                        self.viewModel.goToPaywall()
+                    } label: {
+                        EmptyView()
+                    }
+                    .hidden()
                 }
-                
-                NavigationLink(isActive: Binding<Bool>(get: {
-                    self.isHidden && self.isGoToPaywallReady
-                }, set: { _ in })) {
-                    self.viewModel.goToPaywall()
-                } label: {
-                    EmptyView()
-                }
-                .hidden()
-
-                
             }
             .navigationBarHidden(true)
             .onAppear {
