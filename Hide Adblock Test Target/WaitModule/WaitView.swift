@@ -26,7 +26,7 @@ struct WaitView: View {
                 destination: Text(String()),
                 isActive: self.$isGoToOnboarding
             ) {
-                EmptyView()
+                self.viewModel.goToOnboarding()
             }
             .hidden()
         }

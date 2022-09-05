@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import SwiftUI
 
 final class WaitViewModel: MainCoordinatable, ObservableObject {
     
@@ -21,5 +22,9 @@ final class WaitViewModel: MainCoordinatable, ObservableObject {
     
     @Published var onboarding = Onboarding()
     var subscripitons = Set<AnyCancellable>()
+    
+    func goToOnboarding() -> some View {
+        self.coordinatorDelegate?.goToOnboarding(self.onboarding)
+    }
     
 }

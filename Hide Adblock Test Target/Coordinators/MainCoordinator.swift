@@ -27,8 +27,10 @@ final class MainCoordinator {
         return WaitView(viewModel: viewModel)
     }
     
-    private func getOnboarding() -> AnyPublisher<Onboarding, Never> {
-        ParseManager.first()
+    func goToOnboarding(_ view: Onboarding) -> some View {
+//        go to onboarding
+        
+        EmptyView()
     }
     
 }
