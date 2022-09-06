@@ -16,7 +16,5 @@ struct Onboarding: ParseObject {
     var ACL: ParseACL?
     var buttonColorHEX: String?
     var firstColorHEX: String?
-    var firstColorLocations: Float?
     var secondColorHEX: String?
-    var secondColorLocation: Float?
 }

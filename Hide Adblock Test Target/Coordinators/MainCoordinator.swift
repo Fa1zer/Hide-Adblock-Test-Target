@@ -26,7 +26,7 @@ final class MainCoordinator {
     func start() -> some View {
         self.getSomeScreens()
             .sink { [ weak self ] screens in
-                self?.someScreens = screens
+                self?.someScreens = screens.sorted { ($0.number ?? 0) < ($1.number ?? 0) }
             }
             .store(in: &self.subscriptions)
         

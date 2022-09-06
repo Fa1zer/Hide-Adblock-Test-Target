@@ -13,6 +13,11 @@ final class ParseManager {
     
     static func all<T: ParseObject>() -> AnyPublisher<[T], Never> {
         T.query.findPublisher()
+            .mapError { error -> ParseError in
+                print(error.localizedDescription)
+                
+                return error
+            }
             .replaceError(with: [T]())
             .receive(on: RunLoop.main)
             .eraseToAnyPublisher()
@@ -23,6 +28,11 @@ final class ParseManager {
             .map { models in
                 return models.last ?? T()
             }
+            .mapError { error -> ParseError in
+                print(error.localizedDescription)
+                
+                return error
+            }
             .replaceError(with: T())
             .receive(on: RunLoop.main)
             .eraseToAnyPublisher()
@@ -32,6 +42,11 @@ final class ParseManager {
         T.query.findAllPublisher()
             .map { models in
                 return models.first ?? T()
+            }
+            .mapError { error -> ParseError in
+                print(error.localizedDescription)
+                
+                return error
             }
             .replaceError(with: T())
             .receive(on: RunLoop.main)
