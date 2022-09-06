@@ -22,16 +22,18 @@ final class SomeViewCoordinator {
     
     func start() -> some View {
         if let view = self.someViewsList.first {
-            return AnyView(self.go(to: view.value))
+            return AnyView(self.go(to: view))
         }
         
         return AnyView(EmptyView())
     }
     
-    func go(to view: SomeScreen) -> some View {
-//        go to some view
+    func go(to view: Node<SomeScreen>) -> some View {
+        let viewModel = SomeScreenViewModel(model: SomeScreenModel(), someScreenNode: view)
         
-        return EmptyView()
+        viewModel.coordinatorDelegate = self
+        
+        return SomeScreenView(viewModel: viewModel)
     }
     
 }
