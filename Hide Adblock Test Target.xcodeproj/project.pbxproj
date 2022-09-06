@@ -19,6 +19,10 @@
 		E343A9A328C75AE8002E15C6 /* SomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E343A9A228C75AE8002E15C6 /* SomeScreenViewModel.swift */; };
 		E343A9A528C75AF5002E15C6 /* SomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E343A9A428C75AF5002E15C6 /* SomeScreenView.swift */; };
 		E343A9C728C76A1B002E15C6 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E343A9C628C76A1B002E15C6 /* Launch Screen.storyboard */; };
+		E343A9CA28C76EA5002E15C6 /* AppCenterAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = E343A9C928C76EA5002E15C6 /* AppCenterAnalytics */; };
+		E343A9CC28C76EA5002E15C6 /* AppCenterCrashes in Frameworks */ = {isa = PBXBuildFile; productRef = E343A9CB28C76EA5002E15C6 /* AppCenterCrashes */; };
+		E343A9CE28C76EA5002E15C6 /* AppCenterDistribute in Frameworks */ = {isa = PBXBuildFile; productRef = E343A9CD28C76EA5002E15C6 /* AppCenterDistribute */; };
+		E343A9D028C76F99002E15C6 /* AppSecret.swift in Sources */ = {isa = PBXBuildFile; fileRef = E343A9CF28C76F99002E15C6 /* AppSecret.swift */; };
 		E3BC231328C4D2E900172695 /* Hide_Adblock_Test_TargetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BC231228C4D2E900172695 /* Hide_Adblock_Test_TargetApp.swift */; };
 		E3BC231728C4D2EB00172695 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3BC231628C4D2EB00172695 /* Assets.xcassets */; };
 		E3BC231A28C4D2EB00172695 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3BC231928C4D2EB00172695 /* Preview Assets.xcassets */; };
@@ -51,6 +55,7 @@
 		E343A9A228C75AE8002E15C6 /* SomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeScreenViewModel.swift; sourceTree = "<group>"; };
 		E343A9A428C75AF5002E15C6 /* SomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeScreenView.swift; sourceTree = "<group>"; };
 		E343A9C628C76A1B002E15C6 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		E343A9CF28C76F99002E15C6 /* AppSecret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSecret.swift; sourceTree = "<group>"; };
 		E3BC230F28C4D2E900172695 /* Hide Adblock Test Target.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hide Adblock Test Target.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3BC231228C4D2E900172695 /* Hide_Adblock_Test_TargetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hide_Adblock_Test_TargetApp.swift; sourceTree = "<group>"; };
 		E3BC231628C4D2EB00172695 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -75,6 +80,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E343A9CE28C76EA5002E15C6 /* AppCenterDistribute in Frameworks */,
+				E343A9CA28C76EA5002E15C6 /* AppCenterAnalytics in Frameworks */,
+				E343A9CC28C76EA5002E15C6 /* AppCenterCrashes in Frameworks */,
 				E3BC232428C4D44900172695 /* ParseSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -178,6 +186,7 @@
 			children = (
 				E3BC231628C4D2EB00172695 /* Assets.xcassets */,
 				E3BC233028C4E2CB00172695 /* ParseKeys.swift */,
+				E343A9CF28C76F99002E15C6 /* AppSecret.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -263,6 +272,9 @@
 			name = "Hide Adblock Test Target";
 			packageProductDependencies = (
 				E3BC232328C4D44900172695 /* ParseSwift */,
+				E343A9C928C76EA5002E15C6 /* AppCenterAnalytics */,
+				E343A9CB28C76EA5002E15C6 /* AppCenterCrashes */,
+				E343A9CD28C76EA5002E15C6 /* AppCenterDistribute */,
 			);
 			productName = "Hide Adblock Test Target";
 			productReference = E3BC230F28C4D2E900172695 /* Hide Adblock Test Target.app */;
@@ -294,6 +306,7 @@
 			mainGroup = E3BC230628C4D2E900172695;
 			packageReferences = (
 				E3BC232228C4D44900172695 /* XCRemoteSwiftPackageReference "Parse-Swift" */,
+				E343A9C828C76EA4002E15C6 /* XCRemoteSwiftPackageReference "appcenter-sdk-apple" */,
 			);
 			productRefGroup = E3BC231028C4D2E900172695 /* Products */;
 			projectDirPath = "";
@@ -341,6 +354,7 @@
 				E3BC234128C50E0C00172695 /* Node.swift in Sources */,
 				E343A99428C6840B002E15C6 /* PaywallViewModel.swift in Sources */,
 				E343A98D28C677E0002E15C6 /* OnboardingModel.swift in Sources */,
+				E343A9D028C76F99002E15C6 /* AppSecret.swift in Sources */,
 				E3BC231328C4D2E900172695 /* Hide_Adblock_Test_TargetApp.swift in Sources */,
 				E343A98E28C677E0002E15C6 /* OnboardingView.swift in Sources */,
 				E343A9A328C75AE8002E15C6 /* SomeScreenViewModel.swift in Sources */,
@@ -553,6 +567,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		E343A9C828C76EA4002E15C6 /* XCRemoteSwiftPackageReference "appcenter-sdk-apple" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/microsoft/appcenter-sdk-apple";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 		E3BC232228C4D44900172695 /* XCRemoteSwiftPackageReference "Parse-Swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/parse-community/Parse-Swift";
@@ -564,6 +586,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		E343A9C928C76EA5002E15C6 /* AppCenterAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E343A9C828C76EA4002E15C6 /* XCRemoteSwiftPackageReference "appcenter-sdk-apple" */;
+			productName = AppCenterAnalytics;
+		};
+		E343A9CB28C76EA5002E15C6 /* AppCenterCrashes */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E343A9C828C76EA4002E15C6 /* XCRemoteSwiftPackageReference "appcenter-sdk-apple" */;
+			productName = AppCenterCrashes;
+		};
+		E343A9CD28C76EA5002E15C6 /* AppCenterDistribute */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E343A9C828C76EA4002E15C6 /* XCRemoteSwiftPackageReference "appcenter-sdk-apple" */;
+			productName = AppCenterDistribute;
+		};
 		E3BC232328C4D44900172695 /* ParseSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E3BC232228C4D44900172695 /* XCRemoteSwiftPackageReference "Parse-Swift" */;
