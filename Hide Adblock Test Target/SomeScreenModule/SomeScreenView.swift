@@ -50,7 +50,7 @@ struct SomeScreenView: View {
                             HStack {
                                 Spacer()
                                 
-                                if let hex = self.viewModel.someScreenNode.value.buttonColorHEX {
+                                if let hex = self.viewModel.someScreenNode.value.viewColorHEX {
                                     Color(hex: hex).ignoresSafeArea()
                                 } else {
                                     Color(red: 0.638, green: 1, blue: 0.579)

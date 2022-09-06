@@ -16,8 +16,6 @@ struct Paywall: ParseObject {
     var ACL: ParseACL?
     var title: String?
     var firstColorHEX: String?
-    var firstColorLocations: Float?
     var secondColorHEX: String?
-    var secondColorLocation: Float?
     var imageBase64: String?
 }

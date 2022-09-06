@@ -14,10 +14,8 @@ struct SomeScreen: ParseObject {
     var createdAt: Date?
     var updatedAt: Date?
     var ACL: ParseACL?
-    var buttonColorHEX: String?
+    var viewColorHEX: String?
     var firstColorHEX: String?
-    var firstColorLocations: Float?
     var secondColorHEX: String?
-    var secondColorLocation: Float?
     var number: Int?
 }

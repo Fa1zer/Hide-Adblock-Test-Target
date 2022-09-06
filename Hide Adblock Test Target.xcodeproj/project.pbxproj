@@ -18,6 +18,7 @@
 		E343A9A128C75ADE002E15C6 /* SomeScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E343A9A028C75ADE002E15C6 /* SomeScreenModel.swift */; };
 		E343A9A328C75AE8002E15C6 /* SomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E343A9A228C75AE8002E15C6 /* SomeScreenViewModel.swift */; };
 		E343A9A528C75AF5002E15C6 /* SomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E343A9A428C75AF5002E15C6 /* SomeScreenView.swift */; };
+		E343A9C728C76A1B002E15C6 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E343A9C628C76A1B002E15C6 /* Launch Screen.storyboard */; };
 		E3BC231328C4D2E900172695 /* Hide_Adblock_Test_TargetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BC231228C4D2E900172695 /* Hide_Adblock_Test_TargetApp.swift */; };
 		E3BC231728C4D2EB00172695 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3BC231628C4D2EB00172695 /* Assets.xcassets */; };
 		E3BC231A28C4D2EB00172695 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3BC231928C4D2EB00172695 /* Preview Assets.xcassets */; };
@@ -49,6 +50,7 @@
 		E343A9A028C75ADE002E15C6 /* SomeScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeScreenModel.swift; sourceTree = "<group>"; };
 		E343A9A228C75AE8002E15C6 /* SomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeScreenViewModel.swift; sourceTree = "<group>"; };
 		E343A9A428C75AF5002E15C6 /* SomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeScreenView.swift; sourceTree = "<group>"; };
+		E343A9C628C76A1B002E15C6 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		E3BC230F28C4D2E900172695 /* Hide Adblock Test Target.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hide Adblock Test Target.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3BC231228C4D2E900172695 /* Hide_Adblock_Test_TargetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hide_Adblock_Test_TargetApp.swift; sourceTree = "<group>"; };
 		E3BC231628C4D2EB00172695 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				E3BC231228C4D2E900172695 /* Hide_Adblock_Test_TargetApp.swift */,
+				E343A9C628C76A1B002E15C6 /* Launch Screen.storyboard */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E343A9C728C76A1B002E15C6 /* Launch Screen.storyboard in Resources */,
 				E3BC231A28C4D2EB00172695 /* Preview Assets.xcassets in Resources */,
 				E3BC231728C4D2EB00172695 /* Assets.xcassets in Resources */,
 			);
@@ -477,6 +481,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
+				INFOPLIST_KEY_UIMainStoryboardFile = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -506,6 +512,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
+				INFOPLIST_KEY_UIMainStoryboardFile = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
