@@ -21,9 +21,16 @@ final class MainCoordinator {
     }
     
     private var subscriptions = Set<AnyCancellable>()
+    private var someScreens = [SomeScreen]()
     
     func start() -> some View {
-        self.goToWait()
+        self.getSomeScreens()
+            .sink { [ weak self ] screens in
+                self?.someScreens = screens
+            }
+            .store(in: &self.subscriptions)
+        
+        return self.goToWait()
     }
     
     func goToWait() -> some View {
@@ -42,8 +49,7 @@ final class MainCoordinator {
     }
     
     func goToOnboarding(_ view: Onboarding) -> some View {
-        let model = OnboardingModel()
-        let viewModel = OnboardingViewModel(model: model, onboarding: view)
+        let viewModel = OnboardingViewModel(model: OnboardingModel(), onboarding: view)
         
         viewModel.coordinatorDelegate = self
         
@@ -51,13 +57,24 @@ final class MainCoordinator {
     }
     
     func goToPaywall(_ view: Paywall) -> some View {
-//        go to paywall
+        let viewModel = PaywallViewModel(model: PaywallModel(), paywall: view)
         
-        EmptyView()
+        viewModel.coordinatorDelegate = self
+        viewModel.someScreensIsEmpty = self.someScreens.isEmpty
+        
+        return PaywallView(viewModel: viewModel)
+    }
+    
+    func goToSomeScreens() -> some View {
+        return SomeViewCoordinator(views: self.someScreens).start()
     }
     
     private func getOnboarding() -> AnyPublisher<Onboarding, Never> {
         ParseManager.last()
+    }
+    
+    private func getSomeScreens() -> AnyPublisher<[SomeScreen], Never> {
+        ParseManager.all()
     }
     
 }

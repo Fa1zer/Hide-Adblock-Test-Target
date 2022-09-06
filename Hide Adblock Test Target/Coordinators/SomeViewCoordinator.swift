@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 protocol SomeViewCoordinatable {
-    var coordinatorDelegate: SomeViewCoordinator { get set }
+    var coordinatorDelegate: SomeViewCoordinator? { get set }
 }
 
 final class SomeViewCoordinator {
@@ -20,14 +20,18 @@ final class SomeViewCoordinator {
         self.someViewsList = LinkedList(elements: views)
     }
     
-//    func start() -> (some View)? {
-//        if let view = self.someViewsList.first {
-//            return self.go(to: view.value)
-//        }
-//    }
-//    
-//    func go(to view: SomeScreen) -> some View {
-////        go to some view
-//    }
+    func start() -> some View {
+        if let view = self.someViewsList.first {
+            return AnyView(self.go(to: view.value))
+        }
+        
+        return AnyView(EmptyView())
+    }
+    
+    func go(to view: SomeScreen) -> some View {
+//        go to some view
+        
+        return EmptyView()
+    }
     
 }

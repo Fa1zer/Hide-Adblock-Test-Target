@@ -24,13 +24,11 @@ struct OnboardingView: View {
                     LinearGradient(
                         colors: [
                             self.viewModel.onboarding.firstColorHEX != nil ? Color(
-                                hex: UInt(self.viewModel.onboarding
-                                    .firstColorHEX ?? "") ?? UInt()
+                                hex: self.viewModel.onboarding.firstColorHEX ?? ""
                             ) : .darkPurple,
                             self.viewModel.onboarding.secondColorHEX != nil ? Color(
-                                hex: UInt(self.viewModel.onboarding
-                                    .secondColorHEX ?? "") ?? UInt()
-                            ) : .pretyPurple
+                                hex: self.viewModel.onboarding.secondColorHEX ?? ""
+                            ) : .prettyPurple
                         ],
                         startPoint: .top,
                         endPoint: .bottom
@@ -51,7 +49,7 @@ struct OnboardingView: View {
                                 Spacer()
                                 
                                 if let hex = self.viewModel.onboarding.buttonColorHEX {
-                                    Color(hex: UInt(hex) ?? UInt()).ignoresSafeArea()
+                                    Color(hex: hex).ignoresSafeArea()
                                 } else {
                                     Color(red: 0.638, green: 1, blue: 0.579)
                                         .ignoresSafeArea()
