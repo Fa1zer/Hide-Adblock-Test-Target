@@ -7,6 +7,9 @@
 
 import SwiftUI
 import ParseSwift
+import AppCenter
+import AppCenterCrashes
+import AppCenterAnalytics
 
 @main
 struct Hide_Adblock_Test_TargetApp: App {
@@ -17,6 +20,11 @@ struct Hide_Adblock_Test_TargetApp: App {
             clientKey: clientKey,
             serverURL: URL(string: server) ?? URL(fileURLWithPath: "")
         ))
+        
+        AppCenter.start(withAppSecret: appSecret, services: [
+            Analytics.self,
+            Crashes.self
+        ])
     }
     
     var body: some Scene {
